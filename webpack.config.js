@@ -22,7 +22,9 @@ module.exports = {
                   [
                       '@babel/preset-env',
                       {
-                          "targets": {"chrome": "55"}, /* chrome 55 이상으로 지정 */
+                          "targets": {
+                            "browsers": ["last 3 versions", "ie >= 11"]
+                          },
                           "debug": true
                       }
                   ]
