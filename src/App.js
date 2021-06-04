@@ -3,13 +3,18 @@ import router from './router';
 
 export class App extends Component {
     setup() {
-        console.log('setup')
+
     }
 
     template() {
         return `
             <header class="header">
-
+                <ul class="header__list">
+                    <li class="header__list-item">홈</li>
+                    <li class="header__list-item">서브메뉴1</li>
+                    <li class="header__list-item">서브메뉴2</li>
+                    <li class="header__list-item">서브메뉴3</li>
+                </ul>
             </header>
             <main id="content"></main>
             <footer class="footer"></footer>
@@ -17,7 +22,7 @@ export class App extends Component {
     }
 
     onMounted() {
-        console.log('onMounted')
+        
 
         router.init();
     }
