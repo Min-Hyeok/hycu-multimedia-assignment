@@ -3,12 +3,22 @@ import { Home } from '../views';
 
 const router = {
     init () {
-        new Router({
+        const router = new Router({
             el: document.querySelector('#content'),
             routes: {
                 '/': Home
             }
         });
+
+        router.beforeEach = () => {
+            // console.log('beforeEach')
+        }
+
+        router.afterEach = () => {
+            // console.log('afterEach')
+        }
+
+        router.init();
     }
 }
 

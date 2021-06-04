@@ -7,8 +7,6 @@ export class Router {
     constructor({ el, routes = {} }) {
         this.el = el;
         this.routes = routes;
-
-        this.init();
     }
 
     init() {
