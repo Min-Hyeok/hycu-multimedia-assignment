@@ -3,10 +3,12 @@ import { Home } from '../views';
 export class Router {
     el;
     routes = {};
+    linkActiveClass;
 
-    constructor({ el, routes = {} }) {
+    constructor({ el, routes = {}, linkActiveClass }) {
         this.el = el;
         this.routes = routes;
+        this.linkActiveClass = linkActiveClass;
     }
 
     init() {
@@ -34,6 +36,15 @@ export class Router {
         if (selectedRoute) new selectedRoute(this.el);
 
         this.afterEach();
+        this.activeLink();
+    }
+
+    activeLink() {
+        const $activeLink = document.querySelectorAll(`.${this.linkActiveClass}`);
+        $activeLink.forEach((item) => item.classList.remove(this.linkActiveClass));
+
+        const $active = document.querySelector(`a[href="/${location.hash}"]`);
+        $active && $active.classList.add(this.linkActiveClass);
     }
 
     beforeEach() {}

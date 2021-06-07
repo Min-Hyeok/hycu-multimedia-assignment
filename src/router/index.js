@@ -7,11 +7,12 @@ const router = {
             el: document.querySelector('#content'),
             routes: {
                 '/': Home
-            }
+            },
+            linkActiveClass: 'link-active'
         });
 
         router.beforeEach = () => {
-            // console.log('beforeEach')
+
         }
 
         router.afterEach = () => {
