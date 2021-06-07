@@ -10,10 +10,10 @@ export class App extends Component {
         return `
             <header class="header">
                 <ul class="header__list">
-                    <li class="header__list-item">홈</li>
-                    <li class="header__list-item">서브메뉴1</li>
-                    <li class="header__list-item">서브메뉴2</li>
-                    <li class="header__list-item">서브메뉴3</li>
+                    <li class="header__list-item"><a href="/#/">Home</a></li>
+                    <li class="header__list-item"><a href="/#/sub1">Sub1</a></li>
+                    <li class="header__list-item"><a href="/#/sub2">Sub2</a></li>
+                    <li class="header__list-item"><a href="/#/sub3">Sub3</a></li>
                 </ul>
             </header>
             <main id="content"></main>
