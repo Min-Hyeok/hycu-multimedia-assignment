@@ -14,6 +14,7 @@
             a {
                 display: inline-block;
                 padding: 10px 15px;
+                transition: .4s;
                 &.link-active {
                     color: $orange;
                 }

@@ -2,7 +2,7 @@ import { Router } from '../_core';
 import { Home } from '../views';
 
 const router = {
-    init () {
+    init() {
         const router = new Router({
             el: document.querySelector('#content'),
             routes: {

@@ -17,13 +17,11 @@ export class App extends Component {
                 </ul>
             </header>
             <main id="content"></main>
-            <footer class="footer"></footer>
+            <footer class="footer">Copyright 2021 김민혁</footer>
         `;
     }
 
     onMounted() {
-        
-
         router.init();
     }
 }

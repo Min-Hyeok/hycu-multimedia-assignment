@@ -43,7 +43,9 @@ export class Router {
         const $activeLink = document.querySelectorAll(`.${this.linkActiveClass}`);
         $activeLink.forEach((item) => item.classList.remove(this.linkActiveClass));
 
-        const $active = document.querySelector(`a[href="/${location.hash}"]`);
+        const hash = location.hash.length ? location.hash : '#/';
+
+        const $active = document.querySelector(`a[href="/${hash}"]`);
         $active && $active.classList.add(this.linkActiveClass);
     }
 
