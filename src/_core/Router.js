@@ -27,7 +27,7 @@ export class Router {
 
         for (const path of Object.keys(this.routes)) {
             if (selectedPath.includes(path)) {
-                selectedRoute = this.routes[path];
+                selectedRoute = this.routes[selectedPath];
 
                 break;
             }
@@ -45,7 +45,7 @@ export class Router {
 
         const hash = location.hash.length ? location.hash : '#/';
 
-        const $active = document.querySelector(`a[href="/${hash}"]`);
+        const $active = document.querySelector(`a[href="${hash}"]`);
         $active && $active.classList.add(this.linkActiveClass);
     }
 
